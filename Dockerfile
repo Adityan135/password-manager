@@ -13,10 +13,10 @@ ADD requirements.txt ./
 ADD manage.py ./
 ADD db.sqlite3 ./
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 ENV SECRET_KEY MY_SECRET_KEY
 
 EXPOSE 1337
-CMD [ "python", "manage.py", "runserver", "0.0.0.0:1337" ]
+CMD [ "python3", "manage.py", "runserver", "0.0.0.0:1337" ]
 # CMD ['bash']
